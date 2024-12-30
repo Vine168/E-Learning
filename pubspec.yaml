@@ -1,0 +1,45 @@
+name: e_learning_app
+description: An offline-first e-learning app with PDF viewer, video playback, and score calculation.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management (use Provider or Bloc)
+  provider: ^6.1.2
+
+  # PDF Viewer (choose one)
+  flutter_pdfview: ^1.0.4
+  # Alternative: syncfusion_flutter_pdfviewer for advanced features
+  # syncfusion_flutter_pdfviewer: ^21.1.38
+
+  # Video Playback
+  video_player: ^2.6.5
+
+  # SQLite Database for storing scores
+  sqflite: ^2.0.2
+
+  # File Downloader
+  flutter_downloader: ^1.11.1
+
+  # Path Provider for file storage
+  path_provider: ^2.0.14
+
+  # Cached Network Images (optional for online features)
+  cached_network_image: ^3.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/pdfs/ # Folder for storing offline PDFs
+    - assets/videos/
+    - assets/images/ # Folder for offline videos
