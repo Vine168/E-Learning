@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/home_page.dart'; // Ensure this matches the path to your HomePage file.
+import 'screens/home/home_page.dart'; // Ensure this matches the path to your HomePage file.
 
 void main() {
   runApp(ElearningApp());

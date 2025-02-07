@@ -13,9 +13,7 @@ dependencies:
   provider: ^6.1.2
 
   # PDF Viewer (choose one)
-  flutter_pdfview: ^1.0.4
-  # Alternative: syncfusion_flutter_pdfviewer for advanced features
-  # syncfusion_flutter_pdfviewer: ^21.1.38
+  syncfusion_flutter_pdfviewer: ^20.4.48
 
   # Video Playback
   video_player: ^2.6.5
@@ -41,5 +39,5 @@ flutter:
 
   assets:
     - assets/pdfs/ # Folder for storing offline PDFs
-    - assets/videos/
-    - assets/images/ # Folder for offline videos
+    - assets/videos/ # Folder for offline videos
+    - assets/images/ # Folder for images
