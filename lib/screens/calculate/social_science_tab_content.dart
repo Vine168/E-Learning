@@ -94,7 +94,7 @@ class _SocialScienceTabContentState extends State<SocialScienceTabContent> {
 
     setState(() {
       total = sum;
-      result = pass ? "Pass" : "Fail";
+      result = pass ? "ជាប់" : "ធ្លាក់";
       grade = _determineGrade(sum ~/ _controllers.length, [37, 45, 52, 60, 67]);
     });
   }
@@ -128,7 +128,7 @@ class _SocialScienceTabContentState extends State<SocialScienceTabContent> {
               // Input Section
               Center(
                 child: Text(
-                  "Input Your Score",
+                  "បញ្ចូលពិន្ទុរបស់អ្នក",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -163,7 +163,7 @@ class _SocialScienceTabContentState extends State<SocialScienceTabContent> {
                     ),
                   ),
                   child: Text(
-                    "Find Result",
+                    "ស្វែងរកលទ្ធផល",
                     style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
@@ -175,7 +175,7 @@ class _SocialScienceTabContentState extends State<SocialScienceTabContent> {
                 child: Column(
                   children: [
                     Text(
-                      "Your Result",
+                      "លទ្ធផលរបស់អ្នក",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -186,9 +186,9 @@ class _SocialScienceTabContentState extends State<SocialScienceTabContent> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        _buildResultCard("Result", result),
-                        _buildResultCard("Grade", grade),
-                        _buildResultCard("Total", total.toString()),
+                        _buildResultCard("លទ្ធផល", result),
+                        _buildResultCard("ចំណាត់ថ្នាក់", grade),
+                        _buildResultCard("ពិន្ទុសរុប", total.toString()),
                       ],
                     ),
                     SizedBox(height: 20),
@@ -211,7 +211,7 @@ class _SocialScienceTabContentState extends State<SocialScienceTabContent> {
                         ),
                       ),
                       child: Text(
-                        "Delete",
+                        "លុប",
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     ),
@@ -245,17 +245,27 @@ class _SocialScienceTabContentState extends State<SocialScienceTabContent> {
           ),
           SizedBox(height: 5),
           Text(
-            subject,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            textAlign: TextAlign.center,
-          ),
+              subject == "Khmer Literature" ? "អក្សរសាស្ត្រខ្មែរ" :
+              subject == "Maths" ? "គណិតវិទ្យា" :
+              subject == "History" ? "ប្រវត្តិវិទ្យា" :
+              subject == "Geography" ? "ភូមិវិទ្យា" :
+              subject == "Moral/Civics" ? "សីលធម៌ ពលរដ្ឋ" :
+              subject == "Earth Science" ? "ផែនដីវិទ្យា" :
+              subject == "English" ? "ភាសាអង់គ្លេស" :
+              subject,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+              textAlign: TextAlign.center,
+            ),
           SizedBox(height: 10),
           TextField(
             controller: controller,
             keyboardType: TextInputType.number,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
-              labelText: "Score",
+              labelText: "បញ្ចូលពិន្ទុ",
             ),
             textAlign: TextAlign.center,
           ),

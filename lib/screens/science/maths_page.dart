@@ -3,15 +3,19 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class MathsPage extends StatelessWidget {
   final List<Map<String, String>> topics = [
-    {'title': 'Complex Number', 'pdf': 'assets/pdfs/complex_number.pdf'},
-    {'title': 'Limit of Function', 'pdf': 'assets/pdfs/limit_of_function.pdf'},
-    {'title': 'Continuity of Function', 'pdf': 'assets/pdfs/continuity_of_function.pdf'},
-    {'title': 'Derivative of Function', 'pdf': 'assets/pdfs/derivative_of_function.pdf'},
-    {'title': 'Integral Definite', 'pdf': 'assets/pdfs/integral_definite.pdf'},
-    {'title': 'Differential Function', 'pdf': 'assets/pdfs/differential_function.pdf'},
-    {'title': 'Exponential Function', 'pdf': 'assets/pdfs/exponential_function.pdf'},
-    {'title': 'Probability', 'pdf': 'assets/pdfs/probability.pdf'},
-    {'title': 'Vector Analysis', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
+    {'title': 'ចំនួនកុំផ្លិច', 'pdf': 'assets/pdfs/complex_number.pdf'},
+    {'title': 'លីមីតនៃអនុគមន៍', 'pdf': 'assets/pdfs/limit_of_function.pdf'},
+    {'title': 'ភាពជាប់នៃអនុគមន៍', 'pdf': 'assets/pdfs/continuity_of_function.pdf'},
+    {'title': 'ដេរីវេនៃអនុគមន៍', 'pdf': 'assets/pdfs/derivative_of_function.pdf'},
+    {'title': 'ព្រិមីទីវ និងអាំងតេក្រាលមិនកំណត់', 'pdf': 'assets/pdfs/integral_definite.pdf'},
+    {'title': 'អាំងតេក្រាលកំណត់', 'pdf': 'assets/pdfs/differential_function.pdf'},
+    {'title': 'សមីការឌីផេរ៉ង់ស្យែល', 'pdf': 'assets/pdfs/logarithmic_function.pdf'}, 
+    {'title': 'ប៉ារ៉ាបូល', 'pdf': 'assets/pdfs/probability.pdf'},
+    {'title': 'អេលីប', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
+    {'title': 'អ៊ីពែបូល', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
+    {'title': 'វុីចទ័រក្នុងលំហ', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
+    {'title': 'សិក្សាអនុគមន៍', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
+    {'title': 'ប្រូបាប៊ីលីតេ', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
   ];
 
   @override
@@ -39,7 +43,7 @@ class MathsPage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  "Maths",
+                  "គណិតវិទ្យា​",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,

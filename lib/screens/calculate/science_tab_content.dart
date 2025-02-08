@@ -1,5 +1,3 @@
-// import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class ScienceTabContent extends StatefulWidget {
@@ -95,7 +93,7 @@ class _ScienceTabContentState extends State<ScienceTabContent> {
 
     setState(() {
       total = sum;
-      result = pass ? "Pass" : "Fail";
+      result = pass ? "ជាប់" : "ធ្លាក់";  // "Pass" / "Fail" in Khmer
       grade = _determineGrade(sum ~/ _controllers.length, [37, 45, 52, 60, 67]);
     });
   }
@@ -110,16 +108,6 @@ class _ScienceTabContentState extends State<ScienceTabContent> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF7F7F7),
-      // appBar: AppBar(
-      //   title: Text("Calculate Score"),
-      //   backgroundColor: Color(0xFF9376E0),
-      //   leading: IconButton(
-      //     icon: Icon(Icons.arrow_back),
-      //     onPressed: () {
-      //       Navigator.pop(context);
-      //     },
-      //   ),
-      // ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -129,7 +117,7 @@ class _ScienceTabContentState extends State<ScienceTabContent> {
               // Input Section
               Center(
                 child: Text(
-                  "Input Your Score",
+                  "បញ្ចូលពិន្ទុរបស់អ្នក",  // "Input Your Score" in Khmer
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -162,7 +150,7 @@ class _ScienceTabContentState extends State<ScienceTabContent> {
                     ),
                   ),
                   child: Text(
-                    "Find Result",
+                    "ស្វែងរកលទ្ធផល",  // "Find Result" in Khmer
                     style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
@@ -174,7 +162,7 @@ class _ScienceTabContentState extends State<ScienceTabContent> {
                 child: Column(
                   children: [
                     Text(
-                      "Your Result",
+                      "លទ្ធផលរបស់អ្នក",  // "Your Result" in Khmer
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -185,9 +173,9 @@ class _ScienceTabContentState extends State<ScienceTabContent> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        _buildResultCard("Result", result),
-                        _buildResultCard("Grade", grade),
-                        _buildResultCard("Total", total.toString()),
+                        _buildResultCard("លទ្ធផល", result),  // "Result" in Khmer
+                        _buildResultCard("ចំណាត់ថ្នាក់", grade),  // "Grade" in Khmer
+                        _buildResultCard("ពិន្ទុសរុប", total.toString()),  // "Total" in Khmer
                       ],
                     ),
                     SizedBox(height: 20),
@@ -210,7 +198,7 @@ class _ScienceTabContentState extends State<ScienceTabContent> {
                         ),
                       ),
                       child: Text(
-                        "Delete",
+                        "លុប",  // "Delete" in Khmer
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     ),
@@ -244,6 +232,13 @@ class _ScienceTabContentState extends State<ScienceTabContent> {
             ),
             SizedBox(height: 5),
             Text(
+              subject == "Maths" ? "គណិតវិទ្យា" :
+              subject == "Khmer Literature" ? "អក្សរសាស្ត្រខ្មែរ" :
+              subject == "Physics" ? "រូបវិទ្យា" :
+              subject == "Chemistry" ? "គីមីវិទ្យា" :
+              subject == "Biology" ? "ជីវវិទ្យា" :
+              subject == "History" ? "ប្រវត្តិវិទ្យា" :
+              subject == "English" ? "ភាសាអង់គ្លេស" :
               subject,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -257,7 +252,7 @@ class _ScienceTabContentState extends State<ScienceTabContent> {
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: "Score",
+                labelText: "បញ្ចូលពិន្ទុ",  // "Score" in Khmer
               ),
               textAlign: TextAlign.center,
             ),

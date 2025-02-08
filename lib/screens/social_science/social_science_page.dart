@@ -35,7 +35,7 @@ class SocialSciencePage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  "Social Science",
+                  "វិទ្យាសាស្រ្តសង្គម",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -63,14 +63,14 @@ class SocialSciencePage extends StatelessWidget {
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
                   children: [
-                    _buildCategoryTile(context, "Khmer Literature", "assets/images/literature.png", KhmerLiteraturePage()),
-                    _buildCategoryTile(context, "Maths", "assets/images/maths.png", MathsPage()),
-                    _buildCategoryTile(context, "History", "assets/images/history.png", HistoryPage()),
-                    _buildCategoryTile(context, "Geography", "assets/images/geography.png", GeographyPage()),
-                    _buildCategoryTile(context, "Earth Science", "assets/images/earth_science.png", EarthSciencePage()),
-                    _buildCategoryTile(context, "Moral Civice", "assets/images/morality.png", MoralCivicePage()),
-                    _buildCategoryTile(context, "English", "assets/images/english.png", EnglishPage()),
-                    _buildCategoryTile(context, "Exam Paper", "assets/images/exam.png", ExamPaperPage()),
+                    _buildCategoryTile(context, "អក្សរសាស្រ្តខ្មែរ", "assets/images/literature.png", KhmerLiteraturePage()),
+                    _buildCategoryTile(context, "គណិតវិទ្យា", "assets/images/maths.png", MathsPage()),
+                    _buildCategoryTile(context, "ប្រវត្តវិទ្យា", "assets/images/history.png", HistoryPage()),
+                    _buildCategoryTile(context, "ភូមិវិទ្យា", "assets/images/geography.png", GeographyPage()),
+                    _buildCategoryTile(context, "ផែនដីវិទ្យា", "assets/images/earth_science.png", EarthSciencePage()),
+                    _buildCategoryTile(context, "សីលធម៌​ ពលរដ្ឋ", "assets/images/morality.png", MoralCivicePage()),
+                    _buildCategoryTile(context, "ភាសាអង់គ្លេស", "assets/images/english.png", EnglishPage()),
+                    _buildCategoryTile(context, "វិញ្ញាសា", "assets/images/exam.png", ExamPaperPage()),
                     
                   ],
                 ),

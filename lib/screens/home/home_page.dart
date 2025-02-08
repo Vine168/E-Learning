@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
                   Icon(Icons.menu, size: 28),
                   SizedBox(width: 10),
                   Text(
-                    "Welcome To Nites App",
+                    "ស្វាគមន៍មកកាន់​​ Nites App",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -39,7 +39,8 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16), // Apply border radius
                 child: Image.asset(
                   'assets/images/start_lesson.jpg', // Replace with your image
-                  fit: BoxFit.contain, // Ensures the image scales proportionally
+                  fit:
+                      BoxFit.contain, // Ensures the image scales proportionally
                 ),
               ),
 
@@ -70,18 +71,20 @@ class HomePage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
+                    _buildCategoryCard("Maths", "assets/images/maths.png",
+                        const Color(0xFFA48DF6)),
+                    _buildCategoryCard("Physics", "assets/images/physics.png",
+                        const Color(0xFF6BC6F3)),
+                    _buildCategoryCard("Chemistry",
+                        "assets/images/chemistry.png", const Color(0xFFF97292)),
+                    _buildCategoryCard("Biology", "assets/images/biology.png",
+                        const Color(0xFF4FD7C3)),
                     _buildCategoryCard(
-                        "Maths", "assets/images/maths.png", const Color(0xFFA48DF6)),
-                    _buildCategoryCard(
-                        "Physics", "assets/images/physics.png", const Color(0xFF6BC6F3)),
-                    _buildCategoryCard(
-                        "Chemistry", "assets/images/chemistry.png", const Color(0xFFF97292)),
-                    _buildCategoryCard(
-                        "Biology", "assets/images/biology.png", const Color(0xFF4FD7C3)),
-                    _buildCategoryCard(
-                        "Khmer Literature", "assets/images/literature.png", const Color(0xFFFFD98C)),
-                    _buildCategoryCard(
-                        "English", "assets/images/english.png", const Color(0xFFA48DF6)),
+                        "Khmer Literature",
+                        "assets/images/literature.png",
+                        const Color(0xFFFFD98C)),
+                    _buildCategoryCard("English", "assets/images/english.png",
+                        const Color(0xFFA48DF6)),
                   ],
                 ),
               ),
@@ -90,7 +93,7 @@ class HomePage extends StatelessWidget {
               // Other Sections
               _buildSectionCard(
                 context,
-                "Science",
+                "វិទ្យាសាស្រ្ត",
                 Colors.pink.shade100,
                 "assets/images/science_maths.png",
                 SciencePage(),
@@ -98,7 +101,7 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 10),
               _buildSectionCard(
                 context,
-                "Social Science",
+                "វិទ្យាសាស្រ្តសង្គម",
                 Colors.blue.shade100,
                 "assets/images/social_science.png",
                 SocialSciencePage(),
@@ -106,7 +109,7 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 10),
               _buildSectionCard(
                 context,
-                "Calculate Score",
+                "គណនានិទ្ទេស",
                 Colors.purple.shade100,
                 "assets/images/calculator.png",
                 CalculateScorePage(),
@@ -114,7 +117,7 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 10),
               _buildSectionCard(
                 context,
-                "Tips To Get Grade A",
+                "គន្លឺះទទួលបាននិទ្ទេស A",
                 Colors.green.shade100,
                 "assets/images/plus.png",
                 TipsPage(),
@@ -122,7 +125,7 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 10),
               _buildSectionCard(
                 context,
-                "Video Lesson",
+                "វីដេអូមេរៀន",
                 Colors.orange.shade100,
                 "assets/images/video.png",
                 VideoLessonsPage(),

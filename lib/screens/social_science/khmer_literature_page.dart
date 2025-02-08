@@ -1,28 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-class BiologyPage extends StatelessWidget {
+class KhmerLiteraturePage extends StatelessWidget {
   final List<Map<String, String>> topics = [
-    {'title': 'សុីមណូស្ពែម', 'pdf': 'assets/pdfs/complex_number.pdf'},
-    {'title': 'អង់ស្យូស្ពែម', 'pdf': 'assets/pdfs/limit_of_function.pdf'},
-    {'title': 'ដំណឹកនាំនិងការលូតលាស់នៅក្នុងរុក្ខជាតិ', 'pdf': 'assets/pdfs/continuity_of_function.pdf'},
-    {'title': 'តំណបរំញោច', 'pdf': 'assets/pdfs/derivative_of_function.pdf'},
-    {'title': 'តម្រូវប្រសាទ', 'pdf': 'assets/pdfs/integral_definite.pdf'},
-    {'title': 'សរីរាង្គវិញ្ញាណ', 'pdf': 'assets/pdfs/differential_function.pdf'},
-    {'title': 'ប្រព័ន្ធអង់ដូគ្រីន', 'pdf': 'assets/pdfs/logarithmic_function.pdf'}, 
-    {'title': 'អាសុីតអាមីណេ', 'pdf': 'assets/pdfs/probability.pdf'},
-    {'title': 'ប្រូតេអុីន', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'អង់សុីម', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'ADN ជាព័ត៌មានសេនេទិច', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'ការសម្តែងចេញនៃសែន', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'បច្ចេកវិទ្យាជីវៈ', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'ទ្រឹស្តីរបស់លោកដាវិន', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'ភស្តុតាងនៃការវិវត្ត', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'កំណត់ត្រាផូសុីល', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'ពពួក', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'អន្តរអំពើក្នុងចំណោមភាវៈរស់', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'បន្ទេរថាមពលក្នុងស្ថានប្រព័ន្ធ', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
-    {'title': 'វដ្តរូបធាតុ', 'pdf': 'assets/pdfs/vector_analysis.pdf'},
+    {'title': 'តែងសេចក្តីបែបពន្យល់', 'pdf': 'assets/pdfs/complex_number.pdf'},
+    {'title': 'តែងសេចក្តីបែបពិភាក្សា', 'pdf': 'assets/pdfs/limit_of_function.pdf'},
+    {'title': 'តែងសេចក្តីបែបពិភាក្សាប្រៀបធៀប', 'pdf': 'assets/pdfs/continuity_of_function.pdf'},
+    {'title': 'អក្សសិល្ប៍ខ្មែរ', 'pdf': 'assets/pdfs/derivative_of_function.pdf'},
+
   ];
 
   @override
@@ -45,12 +30,12 @@ class BiologyPage extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset(
-                  'assets/images/biology.png', // Replace with your header image
+                  'assets/images/literature.png', // Replace with your header image
                   height: 50,
                 ),
                 SizedBox(height: 10),
                 Text(
-                  "ជីវវិទ្យា​",
+                  "អក្សសាស្រ្តខ្មែរ​",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,

@@ -26,7 +26,7 @@ class TipsPage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  "Tips To Get Grade A",
+                  "គន្លឺះទទួលបាននិទ្ទេស A",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,

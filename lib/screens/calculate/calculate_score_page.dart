@@ -1,4 +1,3 @@
-// import 'package:e_learning_app/screens/social_science/social_science_page.dart';
 import 'package:flutter/material.dart';
 import 'science_tab_content.dart';
 import 'social_science_tab_content.dart';
@@ -9,7 +8,7 @@ class CalculateScorePage extends StatefulWidget {
 }
 
 class _CalculateScorePageState extends State<CalculateScorePage> {
-  String selectedTab = "Score Table";
+  String selectedTab = "តារាងពិន្ទុ";  // Initial value in Khmer
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ class _CalculateScorePageState extends State<CalculateScorePage> {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  "Calculate Score",
+                  "គណនានិទ្ទេស",  // Title in Khmer
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -62,10 +61,11 @@ class _CalculateScorePageState extends State<CalculateScorePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 _buildTabButton(
-                    context, "Score Table", selectedTab == "Score Table"),
-                _buildTabButton(context, "Science", selectedTab == "Science"),
+                    context, "តារាងពិន្ទុ", selectedTab == "តារាងពិន្ទុ"),
                 _buildTabButton(
-                    context, "Social Science", selectedTab == "Social Science"),
+                    context, "វិទ្យាសាស្រ្ត", selectedTab == "វិទ្យាសាស្រ្ត"),
+                _buildTabButton(
+                    context, "វិទ្យាសាស្រ្តសង្គម", selectedTab == "វិទ្យាសាស្រ្តសង្គម"),
               ],
             ),
           ),
@@ -109,7 +109,7 @@ class _CalculateScorePageState extends State<CalculateScorePage> {
   // Helper method to get tab content
   Widget _getTabContent() {
     switch (selectedTab) {
-      case "Score Table":
+      case "តារាងពិន្ទុ":  // Changed to Khmer
         return Center(
           child: Text(
             "This is the Score Table content.",
@@ -119,9 +119,9 @@ class _CalculateScorePageState extends State<CalculateScorePage> {
             ),
           ),
         );
-      case "Science":
+      case "វិទ្យាសាស្រ្ត":  // Science Tab
         return ScienceTabContent();
-      case "Social Science":
+      case "វិទ្យាសាស្រ្តសង្គម":  // Social Science Tab
         return SocialScienceTabContent();
       default:
         return Center(
