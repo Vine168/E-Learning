@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:elearning_app/screens/pdf_viewer_page.dart';
 
 class GeographyPage extends StatelessWidget {
   final List<Map<String, String>> topics = [
@@ -35,9 +35,9 @@ class GeographyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF97292),
+      backgroundColor: const Color(0xFF6BC6F3),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF97292),
+        backgroundColor: const Color(0xFF6BC6F3),
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
@@ -87,7 +87,7 @@ class GeographyPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              PDFViewerPage(pdfPath: topics[index]['pdf']!),
+                              PdfViewerPage(pdfPath: topics[index]['pdf']!),
                         ),
                       );
                     },
@@ -99,7 +99,7 @@ class GeographyPage extends StatelessWidget {
                       elevation: 4,
                       child: ListTile(
                         leading: CircleAvatar(
-                          backgroundColor: const Color(0xFFF97292),
+                          backgroundColor: const Color(0xFF6BC6F3),
                           child: Text(
                             (index + 1).toString(),
                             style: TextStyle(color: Colors.white),
@@ -122,19 +122,4 @@ class GeographyPage extends StatelessWidget {
   }
 }
 
-class PDFViewerPage extends StatelessWidget {
-  final String pdfPath;
 
-  PDFViewerPage({required this.pdfPath});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('PDF Viewer'),
-        backgroundColor: const Color(0xFFF97292),
-      ),
-      body: SfPdfViewer.asset(pdfPath),
-    );
-  }
-}

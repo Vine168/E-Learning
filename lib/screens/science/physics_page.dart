@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:elearning_app/screens/pdf_viewer_page.dart';
 
 class PhysicsPage extends StatelessWidget {
   final List<Map<String, String>> topics = [
@@ -75,7 +75,7 @@ class PhysicsPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              PDFViewerPage(pdfPath: topics[index]['pdf']!),
+                              PdfViewerPage(pdfPath: topics[index]['pdf']!),
                         ),
                       );
                     },
@@ -110,19 +110,3 @@ class PhysicsPage extends StatelessWidget {
   }
 }
 
-class PDFViewerPage extends StatelessWidget {
-  final String pdfPath;
-
-  PDFViewerPage({required this.pdfPath});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('PDF Viewer'),
-        backgroundColor: const Color(0xFFF97292),
-      ),
-      body: SfPdfViewer.asset(pdfPath),
-    );
-  }
-}

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../science/maths_page.dart';
-import '../science/khmer_literature_page.dart';
-import '../science/english_page.dart';
-import '../science/history_page.dart';
-import '../science/exam_paper_page.dart';
+import 'maths_page.dart';
+import 'khmer_literature_page.dart';
+import 'english_page.dart';
+import 'history_page.dart';
+import 'exam_paper_page.dart';
 import 'moral_civice.dart';
 import 'earth_science_page.dart';
 import 'geography_page.dart';

@@ -4,18 +4,16 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 class PdfViewerPage extends StatelessWidget {
   final String pdfPath;
 
-  PdfViewerPage({required this.pdfPath});
+  const PdfViewerPage({Key? key, required this.pdfPath}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("PDF Viewer"),
-        backgroundColor: Colors.pink.shade100,
+        backgroundColor: Colors.white,
       ),
-      body: SfPdfViewer.asset(
-        pdfPath, // Path of the PDF passed from the MathsPage
-      ),
+      body: SfPdfViewer.asset(pdfPath),
     );
   }
 }
